@@ -6,6 +6,11 @@ name = "pypi"
 [packages]
 fastapi = "*"
 uvicorn = {extras = ["standard"], version = "*"}
+sqlalchemy = "*"
+passlib = {extras = ["bcrypt"], version = "*"}
+psycopg2 = "*"
+pydantic = {extras = ["email"], version = "*"}
+alembic = "*"
 
 [dev-packages]
 
