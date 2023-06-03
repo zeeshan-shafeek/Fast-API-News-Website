@@ -10,6 +10,7 @@ class Role(str, Enum):
     
 class CommentBase(BaseModel):
     content: str
+    created_at: Optional[datetime.datetime]
 
 class CommentCreate(CommentBase):
     created_at: Optional[datetime.datetime] = Field(default_factory=datetime.datetime.now)
@@ -26,7 +27,7 @@ class PostBase(BaseModel):
     title: str
     content: str
     published: bool
-    updated_at: Optional[datetime.datetime] 
+    created_at: Optional[datetime.datetime] 
 
 class PostCreate(PostBase):
     created_at: Optional[datetime.datetime] = Field(default_factory=datetime.datetime.now)
